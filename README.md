@@ -1,6 +1,4 @@
 # APPR-Grid-Optimizer
-Motor de optimización basado en Reinforcement Learning (DQN) para la gestión dinámica de la capacidad de transmisión eléctrica. Reduce el desperdicio de energía solar (*curtailment*) al gestionar proactivamente el almacenamiento de baterías
-# APPR-Grid-Optimizer
 
 ![Badge de estado de desarrollo](https://img.shields.io/badge/Fase%20Actual-Entrenamiento%20DQN-blue)
 ![Badge de lenguaje](https://img.shields.io/badge/Lenguaje-Python-yellow.svg)
@@ -72,4 +70,6 @@ Ejecute los siguientes notebooks en orden secuencial dentro de la carpeta `/note
 3.  **Escalabilidad a GCP:** Migrar la lógica del entorno y el entrenamiento a un servicio gestionado (ej. Vertex AI Training) para simular escenarios más grandes y complejos.
 
 ---
-*Desarrollado con el objetivo de acelerar la adopción de energía limpia mediante optimización inteligente de sistemas.*
+*Desarrollado con el objetivo de acelerar la adopción de energía limpia mediante optimización inteligente de sistemas.## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abra un 'issue' o envíe un 'pull request'.*
