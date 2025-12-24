@@ -1,6 +1,8 @@
 # APPR-Grid-Optimizer
 
-Motor de optimización basado en Reinforcement Learning (DQN) para la gestión dinámica de la capacidad de transmisión eléctrica. Reduce el desperdicio de energía solar (curtailment) al gestionar proactivamente el almacenamiento de baterías.
+[![License](https://img.shields.io/github/license/sampolmx/APPR-Grid-Optimizer)](https://github.com/sampolmx/APPR-Grid-Optimizer/blob/main/LICENSE) [![Repo size](https://img.shields.io/github/repo-size/sampolmx/APPR-Grid-Optimizer)](https://github.com/sampolmx/APPR-Grid-Optimizer) [![Top language](https://img.shields.io/github/languages/top/sampolmx/APPR-Grid-Optimizer)](https://github.com/sampolmx/APPR-Grid-Optimizer) [![Python](https://img.shields.io/badge/python-3.8%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/) [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
+
+Motor de optimización basado en Reinforcement Learning (DQN) para la gestión dinámica de la capacidad de transmisión eléctrica. Reduce el desperdicio de energía solar (curtailment) al gestion[...]
 
 Resumen corto / Short summary
 - Español: Motor de optimización (DQN) para reducir el curtailment solar mediante la gestión proactiva de baterías y la capacidad de transmisión.
