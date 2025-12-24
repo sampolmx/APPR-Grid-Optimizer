@@ -61,7 +61,4 @@ Citación / Citation
 Si usas este repositorio en investigación, por favor cita: sampolmx/APPR-Grid-Optimizer (GitHub).
 
 Contacto
-- Autor: sampolmx
-
---- README (ES) ---
-Se incluye una versión resumida en español arriba. Si prefieres que el README esté íntegramente en español o en inglés, o ambos, indícalo y actualizaré el archivo.
+- Autor: Sam Polanco Iñigo 
