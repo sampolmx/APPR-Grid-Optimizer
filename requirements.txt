@@ -1,8 +1,24 @@
-pandas
-numpy
-matplotlib
-scikit-learn
-# tensorflow-macos
-# tensorflow-metal
-torch
+# Basic data and science
+numpy>=1.21
+pandas>=1.3
+matplotlib>=3.4
+seaborn>=0.11
+scikit-learn>=1.0
 
+# Jupyter
+jupyterlab>=3.0
+notebook>=6.0
+ipykernel
+ipywidgets
+
+# Reinforcement learning
+gym>=0.21
+stable-baselines3>=1.6.0
+torch>=1.10
+
+tqdm
+
+# Optional / tools
+tensorboard
+pytest
+nbconvert

@@ -1,75 +1,67 @@
 # APPR-Grid-Optimizer
 
-![Badge de estado de desarrollo](https://img.shields.io/badge/Fase%20Actual-Entrenamiento%20DQN-blue)
-![Badge de lenguaje](https://img.shields.io/badge/Lenguaje-Python-yellow.svg)
-![Badge de framework](https://img.shields.io/badge/Framework-TensorFlow%20%2F%20Keras-orange.svg)
+Motor de optimización basado en Reinforcement Learning (DQN) para la gestión dinámica de la capacidad de transmisión eléctrica. Reduce el desperdicio de energía solar (curtailment) al gestionar proactivamente el almacenamiento de baterías.
 
-## 🌟 Visión General
+Resumen corto / Short summary
+- Español: Motor de optimización (DQN) para reducir el curtailment solar mediante la gestión proactiva de baterías y la capacidad de transmisión.
+- English: Optimization engine (DQN) to reduce solar curtailment by proactively managing battery storage and transmission capacity.
 
-Este repositorio alberga el prototipo del **Agente de Planificación Predictiva de Red (APPR)**. El APPR es un sistema basado en **Aprendizaje por Refuerzo (Deep Q-Network - DQN)** diseñado para resolver uno de los cuellos de botella más críticos en la transición energética: la gestión de la intermitencia renovable.
+Características / Features
+- Implementación de agentes DQN para decisiones de carga/descarga de baterías.
+- Simulaciones y notebooks para entrenamiento y evaluación.
+- Scripts y utilidades para preprocesado de datos y visualización de resultados.
 
-El agente aprende a despachar dinámicamente recursos de almacenamiento (baterías) para **minimizar el *curtailment*** (desperdicio de energía solar) mientras se adhiere estrictamente a un **límite de capacidad de transmisión fijo** (simulando un cuello de botella).
+Quick start
+1. Clona el repositorio:
+   git clone https://github.com/sampolmx/APPR-Grid-Optimizer.git
+2. Crea un entorno virtual (recomendado) e instala dependencias:
+   python -m venv .venv
+   source .venv/bin/activate  # o .venv\Scripts\activate en Windows
+   pip install -r requirements.txt
+3. Abre los notebooks en el directorio notebooks/ con Jupyter:
+   jupyter lab
 
-### 🎯 Objetivo Estratégico
+Installation
+- Recomendado: Python 3.8+.
+- Instala las dependencias:
+  pip install -r requirements.txt
 
-Convertirse en un **Optimizador de la Transición**, reduciendo la fricción técnica y económica que ralentiza la adopción masiva de energías limpias.
+Usage
+- Notebooks: revisa el directorio `notebooks/` para los flujos de trabajo principales (entrenamiento, evaluación, análisis de resultados).
+- Scripts: Si el proyecto contiene un paquete `src/` o `app/`, ejecutar los scripts desde el entorno virtual.
+- Reproducibilidad: fija seeds en los notebooks y revisa `experiments/` si existe para reproducir corridas.
 
-## 🚀 Estado del Proyecto (MVP)
+Repository structure (suggested)
+- notebooks/          # Jupyter notebooks (entrenamiento, evaluación, análisis)
+- src/ or app/         # Código fuente de los agentes y entorno
+- data/                # Datos (o instrucciones para obtenerlos)
+- experiments/         # Resultados, checkpoints, logs
+- requirements.txt     # Dependencias
+- LICENSE
+- README.md
 
-El prototipo MVP se centra en una simulación controlada:
+Notebooks index (example)
+- notebooks/01_data_preparation.ipynb
+- notebooks/02_environment_and_agent.ipynb
+- notebooks/03_training.ipynb
+- notebooks/04_evaluation.ipynb
 
-*   **Sistema:** 100 MW de capacidad solar instalada.
-*   **Cuello de Botella:** Límite de transmisión estricto de **80 MW**.
-*   **Recurso de Mitigación:** Batería de 60 MWh con tasa de 20 MW.
-*   **Fase:** Entrenamiento del agente DQN completado, comparando la política aprendida contra una gestión ingenua (*Baseline*).
+Model card / Reproducibility
+- Describe el modelo (DQN): arquitectura, observaciones, acciones, recompensa.
+- Guarda hiperparámetros y seeds en `experiments/` para reproducibilidad.
 
-## 🛠️ Cómo Ejecutar el Prototipo
+Contributing
+- Si deseas contribuir, abre un issue o PR.
+- Incluye descripciones claras y pasos para reproducir bugs.
 
-Este proyecto está diseñado para ejecutarse en un entorno Jupyter Notebook.
+License
+- Este proyecto está licenciado bajo la licencia MIT. Ver el archivo LICENSE para más detalles.
 
-### 1. Prerrequisitos
+Citación / Citation
+Si usas este repositorio en investigación, por favor cita: sampolmx/APPR-Grid-Optimizer (GitHub).
 
-Asegúrese de tener Python y Jupyter instalados.
+Contacto
+- Autor: sampolmx
 
-### 2. Instalación de Dependencias
-
-Instale todas las librerías necesarias a partir del archivo `requirements.txt`:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Ejecución de los Notebooks
-
-Ejecute los siguientes notebooks en orden secuencial dentro de la carpeta `/notebooks`:
-
-1.  **`01_Data_Prep_Baseline.ipynb`**: Define el entorno simulado, genera el conjunto de datos de estrés y establece la métrica de comparación (*Baseline*).
-2.  **`02_APPR_DQN_Training.ipynb`**: Contiene la implementación del entorno RL, el modelo DQN (TensorFlow/Keras) y el bucle de entrenamiento.
-
----
-
-## 📁 Estructura del Repositorio
-
-```
-/APPR_Grid_Optimizer
-├── .gitignore             # Archivos ignorados (cachés, datos brutos grandes)
-├── requirements.txt       # Lista de dependencias para replicación
-├── README.md              # Documentación actual
-│
-├── data/                  # (Se puede usar para datos reales si son necesarios)
-│
-└── notebooks/
-    ├── 01_Data_Prep_Baseline.ipynb
-    └── 02_APPR_DQN_Training.ipynb
-```
-
-## ⚙️ Próximos Pasos (Hoja de Ruta)
-
-1.  **Refactorización y Validación:** Mejorar la Fase 3 para obtener una comparación visual y cuantitativa directa entre Baseline y APPR.
-2.  **Integración de Predicción:** Migrar el estado del agente para incluir modelos de pronóstico de energía (usando LSTMs o Transformers) en lugar de solo datos instantáneos.
-3.  **Escalabilidad a GCP:** Migrar la lógica del entorno y el entrenamiento a un servicio gestionado (ej. Vertex AI Training) para simular escenarios más grandes y complejos.
-
----
-*Desarrollado con el objetivo de acelerar la adopción de energía limpia mediante optimización inteligente de sistemas.## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, abra un 'issue' o envíe un 'pull request'.*
+--- README (ES) ---
+Se incluye una versión resumida en español arriba. Si prefieres que el README esté íntegramente en español o en inglés, o ambos, indícalo y actualizaré el archivo.
